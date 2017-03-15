@@ -1,4 +1,5 @@
 clear all;
+pkg load signal;
 load Azstride.txt;
 x = Azstride;
 a = 1;
