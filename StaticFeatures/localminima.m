@@ -10,8 +10,17 @@ t = 1:length(x);
 %plot(t,x,'',t,y,'-');
 %legend('original','mask is 1/4');
 
+k=1;
+for i=2:length(y)-1
+if ( y(i-1)>y(i) && y(i+1)>y(i) )
+val(k)=y(i)
+pos(k)=i
+
+k=k+1;
+endif
+endfor
 
 
- [pks idx] = findpeaks(y);
- plot(t,x,t,y,t(idx),y(idx));
+ %[pks idx] = findpeaks(y);
+ plot(t,y,t(pos),y(pos));
 
