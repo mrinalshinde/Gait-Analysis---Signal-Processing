@@ -22,11 +22,8 @@ endfor
 val
 pos
 
-w=pos(2):pos(4);
-finalstride=y(w);
+%w=pos(2):pos(4);
+%finalstride=y(w);
 
-
-
- %[pks idx] = findpeaks(y);
- plot(finalstride);
-%plot(t,y,t(pos),y(pos));
+ %plot(finalstride);
+plot(t,y,t(pos),y(pos));
